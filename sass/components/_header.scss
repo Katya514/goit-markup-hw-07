@@ -1,0 +1,138 @@
+.header {
+    background-color: $plain-white;
+    border-bottom: 1px solid $border-bottom;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation__links {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 50px;
+
+    background-color: $plain-white;
+
+    &.navigation__item.current {
+        color: $accent-color;
+    }
+}
+
+.header__logo {
+    display: flex;
+    margin-right: 93px;
+    align-items: center;
+
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    text-decoration: none;
+
+    color: $plain-black;
+}
+
+.navigation {
+    display: flex;
+}
+
+.navigation__item {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.142;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    color: $header-color;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+
+    &.current::after {
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        content: "";
+
+        width: 100%;
+        height: 4px;
+
+        background-color: $accent-color;
+        border-radius: 2px;
+    }
+}
+
+.contacts {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.contacts__email {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.172;
+    letter-spacing: 0.02em;
+
+    color: $main-text;
+    fill: $main-text;
+
+    transition-duration: $trans-time;
+    transition-timing-function: $trans-type;
+
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+        color: $accent-color;
+    }
+}
+
+.contacts__phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.172;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    color: $main-text;
+    fill: $main-text;
+
+    transition-duration: $trans-time;
+    transition-timing-function: $trans-type;
+
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+        color: $accent-color;
+    }
+}
